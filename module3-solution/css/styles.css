@@ -1,0 +1,119 @@
+body {
+    font-size:  16px;
+    font-family: cursive;
+}
+
+h1{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight:bolder;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.2em;
+    font-weight:bolder;
+    text-align: center; 
+}
+
+div {
+    padding:10px;
+}
+
+p{
+    padding-left:20px;
+    padding-right:20px;
+    clear:right;
+}
+
+li{
+    border:1px solid black;
+}
+
+.container-fluid {
+    background-color: gray;
+    border: 2px solid black;
+}
+
+.box{
+    background-color: gray;
+    border:1px solid black; 
+    position:relative;
+    float:left; /*must have it, otherwise col-md-12 of box 3 will expand and include box 1&2 */
+    margin:10px;/*If div padding is going to collapse, use margin */
+}
+
+/** HEADER **/
+
+#header-nav{
+    background: color #999999;
+    border-radius:0;
+    border:0;
+}
+
+.navbar-brand {
+    padding-top: 25px;
+}
+
+.navbar-brand h1 { /*restaurant name */
+    margin-top:0; 
+    margin-bottom:0;
+    line-height: .75;
+    color: #000;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration:none;
+}
+
+#nav-list a {
+    color: black;
+    text-align: center;
+}
+
+ #nav-list a:hover {
+    background: gray;
+    border:#dcdcdc;
+}
+  
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+    border: 1px solid black;
+}
+
+
+.navbar-header button.navbar-toggle {
+    clear: both; /*clear property, so the yellow header background will cover all existing elements */
+    margin-top: -55px;
+}
+/* END HEADER */
+
+
+/*** large devices only ***/
+@media (min-width: 1200px) {
+
+}
+/*** medium devices only ***/
+@media (min-width:992px) and (max-width:1199px) {
+
+}
+
+/*** small devices only ***/
+@media (min-width: 768px) and (max-width:991px) {
+     
+}
+
+/*** extra small devices only ***/
+@media (max-width: 767px) {
+    /*Header*/
+    .navbar-brand{
+        padding-top:10px;
+        height:80px; /*set a concret height for nav bar */
+    }
+
+    .navbar-brand h1{ /*restaurant name */
+        padding-top: 10px;
+        font-size: 5vw; /*1vw = 1% of viewport width, so the font will be responsive  */
+    }
+
+
+}

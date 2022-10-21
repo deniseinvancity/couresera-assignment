@@ -1,119 +1,103 @@
+/*current issues:1) company name vertical align to the middle 2) toggle on the same line as header */
+
+*{
+    box-sizing:border-box;
+}
+
 body {
-    font-size:  16px;
     font-family: cursive;
+    font-weight: bold;
 }
 
-h1{
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-weight:bolder;
-    text-align: center;
+.navbar-brand a:hover, .navbar-brand a:focus, .navbar-brand a:link, .navbar-brand a:visited {
+    text-decoration: none;
 }
 
-h2{
-    font-size: 1.2em;
-    font-weight:bolder;
-    text-align: center; 
+h1, h2, h3 {
+    font-weight: bolder;
 }
 
-div {
-    padding:10px;
-}
-
-p{
-    padding-left:20px;
-    padding-right:20px;
-    clear:right;
-}
-
-li{
-    border:1px solid black;
-}
-
-.container-fluid {
-    background-color: gray;
-    border: 2px solid black;
-}
-
-.box{
-    background-color: gray;
-    border:1px solid black; 
-    position:relative;
-    float:left; /*must have it, otherwise col-md-12 of box 3 will expand and include box 1&2 */
-    margin:10px;/*If div padding is going to collapse, use margin */
-}
-
-/** HEADER **/
-
-#header-nav{
-    background: color #999999;
-    border-radius:0;
-    border:0;
-}
-
-.navbar-brand {
-    padding-top: 25px;
-}
-
-.navbar-brand h1 { /*restaurant name */
-    margin-top:0; 
-    margin-bottom:0;
-    line-height: .75;
+h1 {
     color: #000;
 }
 
-.navbar-brand a:hover, .navbar-brand a:focus {
-    text-decoration:none;
+/*Header: Left side */
+.container-fluid{
+    background-color: gray;
+    border: 2px solid #000;
+    position: relative;
 }
 
-#nav-list a {
-    color: black;
+/*Header: Toggle */
+.navbar-toggle{
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+    width:40px;
+    height:7px; /*control the weight of the line */
+    border-radius: 5px;
+}
+
+.navbar-default .navbar-toggle{ /*update the outline of the toggle */
+    border-color:#000;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    border-color:#dcdcdc;
+    background-color: gray;
+}
+
+.navbar-default .navbar-toggle .icon-bar { /*update the bars of the toggle */
+    background-color:black;
+}
+
+.navbar-default .navbar-toggle .icon-bar:hover, .navbar-default .navbar-toggle .icon-bar:focus {
+    background-color: #dcdcdc;
+}
+
+
+#collapsable-nav{
+    padding: 0px; /*use to remove the space at either side of the toggle menu */
+}
+
+#nav-list {
     text-align: center;
+    background-color: #fff;
+    padding: 0;
+    margin:0;
 }
 
- #nav-list a:hover {
-    background: gray;
-    border:#dcdcdc;
-}
-  
-.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-    border: 1px solid black;
+li{
+    border: 1px solid #000;
 }
 
-
-.navbar-header button.navbar-toggle {
-    clear: both; /*clear property, so the yellow header background will cover all existing elements */
-    margin-top: -55px;
+li span {
+    color:#000;
 }
-/* END HEADER */
 
-
-/*** large devices only ***/
-@media (min-width: 1200px) {
-
+/** MAIN CONTENT **/
+.block {
+    background-color: gray;
+    margin:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height:500px;
 }
-/*** medium devices only ***/
-@media (min-width:992px) and (max-width:1199px) {
+
+/***desktop mockup ***/
+@media (min-width:992px) and (max-width:1199px){
 
 }
 
-/*** small devices only ***/
+/***tablet mockup ***/
 @media (min-width: 768px) and (max-width:991px) {
      
 }
 
-/*** extra small devices only ***/
+/***mobile mockup ***/
 @media (max-width: 767px) {
-    /*Header*/
-    .navbar-brand{
-        padding-top:10px;
-        height:80px; /*set a concret height for nav bar */
-    }
-
-    .navbar-brand h1{ /*restaurant name */
-        padding-top: 10px;
-        font-size: 5vw; /*1vw = 1% of viewport width, so the font will be responsive  */
-    }
 
 
 }
